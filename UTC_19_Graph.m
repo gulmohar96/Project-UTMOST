@@ -2,7 +2,7 @@ clear all;
 clc;
 close all;
 
-fileID = load('SNR.10.trace337.txt');
+%fileID = load('SNR.10.trace337.txt');
 
 %% _______BASIC FANBEAM PLOTS________ %%
 % SNR = fileID(:,1);
@@ -59,6 +59,7 @@ fileID = load('SNR.10.trace337.txt');
 % ylabel('Time')
 
 %% TRACE 337 PLOT %%
+fileID = load('SNR.10.trace337.txt');
 time = fileID(:,1);
 fb = fileID(:,2);
 
@@ -68,9 +69,16 @@ xlabel('corrected fanbeam position')
 ylabel('Time')
 
 subplot(1,2,2)
-t2 = fileID(:,1)
-fb2 = fileID(:,15)
-plot(fb2, t2, '.')
+% t2 = fileID(:,1)
+% fb2 = fileID(:,15)
+% plot(fb2, t2, '.')
+% hold on;
+
+newfile = load('trace337_final.txt');
+t3 = newfile(:,1);
+fb3 = newfile(:,15);
+plot(fb3,t3, '.')
+
 xlabel('Original unstraightened fanbeam position')
 ylabel('Time')
 

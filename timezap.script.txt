@@ -1,0 +1,27 @@
+awk '{if(sqrt(($1 - 3284)**2) > 1) print}' SNR.10.trace337.txt >temp1
+awk '{if(sqrt(($1 - 2682)**2) > 1) print}' temp1 >temp2
+awk '{if(sqrt(($1 - 1194)**2) > 1) print}' temp2 >temp3
+awk '{if(sqrt(($1 - 955.5)**2) > 1) print}' temp3 >temp4
+awk '{if(sqrt(($1 - 955.4)**2) > 1) print}' temp4 >temp5
+awk '{if(sqrt(($1 - 890.1)**2) > 1) print}' temp5 >temp6
+awk '{if(sqrt(($1 - 804)**2) > 1) print}' temp6 >temp7
+awk '{if(sqrt(($1 - 757)**2) > 1) print}' temp7 >temp8
+awk '{if(sqrt(($1 - 718)**2) > 1) print}' temp8 >temp9
+awk '{if(sqrt(($1 - 580)**2) > 1) print}' temp9 >temp10
+awk '{if(sqrt(($1 - 558)**2) > 1) print}' temp10 >temp12
+awk '{if(sqrt(($1 - 508)**2) > 1) print}' temp12 >temp13
+awk '{if(sqrt(($1 - 374)**2) > 1) print}' temp13 >temp14
+awk '{if(sqrt(($1 - 374)**2) > 1) print}' temp14 >temp15
+awk '{if(sqrt(($1 - 195)**2) > 1) print}' temp15 >temp16
+
+awk '{if(sqrt(($1 - 1358)**2) > 5) print}' temp16 >temp17
+awk '{if(sqrt(($1 - 197)**2) > 5) print}' temp17 >temp18
+awk '{if(sqrt(($1 - 2683)**2) > 10) print}' temp18 >temp19
+
+awk '{if(sqrt(($1 - 702)**2) > 10) print}' temp19 > temp20
+awk '{if(sqrt(($1 - 2896)**2) > 10) print}' temp20 > temp21
+
+
+wc -l temp*
+
+rm temp*
